@@ -1,0 +1,16 @@
+export const FontSizes = {
+  displayLg: "120px",
+  displayMd: "88px",
+  displaySm: "64px",
+  heading1: "56px",
+  heading2: "40px",
+  heading3: "36px",
+  heading4: "32px",
+  heading5: "28px",
+  heading6: "16px",
+  pxl: "20px",
+  plg: "18px",
+  pbase: "16px",
+  psm: "14px",
+  pxs: "12px",
+} as const;

@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.title-card-hunter {
+  z-index: 1;
+}
+.title-card-hunter:hover::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to bottom, #0000005c, #3b82f600, #000000d9);
+  top: 0;
+  left: 0;
+  border-radius: 15px;
+}
+.title-card-hunter:hover span {
+  z-index: 22;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 160px;
+}
+
+.loading {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #11adcf;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
