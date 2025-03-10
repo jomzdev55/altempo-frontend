@@ -1,3 +1,2 @@
 1- Aveces el menu cambia de posicion y esto puede perjudicar a los usuarios porque siempre se espera que el back este en el mismo lugar.
 2- Hay pasos que se van realizando a la hora de hacer sign in pero no tienen coherencia porque en la screen #1 dice que se va en el paso 1 de 5 y en la screen #2 dice que se va en el paso 2 de 4. Y de alli el conteo no sigue.
-3- 

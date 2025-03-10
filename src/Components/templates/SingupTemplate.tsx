@@ -1,6 +1,6 @@
-import Header from "@Components/organisms/Header";
-import CardHunter from "@Components/molecules/CardHunter";
-import Text from "@Components/atoms/Text";
+import Header from "../../Components/organisms/Header";
+import CardHunter from "../../Components/molecules/CardHunter";
+import Text from "../../Components/atoms/Text";
 import Load from "../molecules/Load";
 
 export type CardsHunter = {
@@ -16,7 +16,7 @@ interface SingupStepsProps {
   title: string;
   description: string;
   cardHunter: CardsHunter[];
-  gridClass: string;
+  gridClass?: string;
 }
 
 const SingupTemplate = ({
