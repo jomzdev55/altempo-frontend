@@ -7,6 +7,17 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
+## Steps to install 
+
+- git clone repository
+- npm install
+- npm run dev
+
+## Comments about figma
+- Sometimes the menu changes position and this can be detrimental to users because it is always expected that the back is in the same place.
+- There are steps that are being done at the time of sign in but they are not consistent because on screen #1 it says that it goes to step 1 of 5 and on screen #2 it says that it goes to step 2 of 4.
+
+
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
