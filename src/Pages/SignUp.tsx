@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import SingupTemplate, {
-  CardsHunter,
-} from "../Components/templates/SingupTemplate";
+import SingupTemplate from "../Components/templates/SingupTemplate";
 
 const SignUp = () => {
   const navigate = useNavigate();

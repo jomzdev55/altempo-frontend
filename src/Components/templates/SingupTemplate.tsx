@@ -2,22 +2,14 @@ import Header from "../../Components/organisms/Header";
 import CardHunter from "../../Components/molecules/CardHunter";
 import Text from "../../Components/atoms/Text";
 import Load from "../molecules/Load";
-
-export type CardsHunter = {
-  id: number;
-  name?: React.ReactNode;
-  subtitle?: string;
-  image: string;
-  typeCheck?: boolean;
-  // onCheck?: () => void;
-  onClick: () => void;
-};
+import CardHunterCheck from "../molecules/CardHunterCheck";
 
 interface SingupStepsProps {
   loading: boolean;
   title: string;
   description: string;
-  cardHunter: CardsHunter[];
+  cardHunter?: CardsHunter[];
+  cardHunterCheck?: CardHunterCheck[];
   gridClass?: string;
   steps?: string;
 }
@@ -27,6 +19,7 @@ const SingupTemplate = ({
   title,
   description,
   cardHunter,
+  cardHunterCheck,
   gridClass,
   steps,
 }: SingupStepsProps) => {
@@ -78,18 +71,29 @@ const SingupTemplate = ({
           </div>
           <div className={finalClassGrid1}>
             <div className={finalClass2}>
-              {cardHunter.map((card: CardsHunter) => (
-                <CardHunter
-                  id={card.id}
-                  key={card.id}
-                  name={<TitleCard>{card.name}</TitleCard>}
-                  image={card.image}
-                  onClick={card.onClick}
-                  subtitle={card.subtitle}
-                  typeCheck={card.typeCheck}
-                  // onCheck={card.onCheck}
-                />
-              ))}
+              {cardHunterCheck &&
+                cardHunterCheck.map((card: CardHunterCheck) => (
+                  <CardHunterCheck
+                    id={card.id}
+                    key={card.id}
+                    name={<TitleCard>{card.name}</TitleCard>}
+                    image={card.image}
+                    onClick={card.onClick}
+                    subtitle={card.subtitle}
+                    typeCheck={card.typeCheck}
+                  />
+                ))}
+              {cardHunter &&
+                cardHunter.map((card: CardsHunter) => (
+                  <CardHunter
+                    id={card.id}
+                    key={card.id}
+                    name={<TitleCard>{card.name}</TitleCard>}
+                    image={card.image}
+                    onClick={card.onClick}
+                    subtitle={card.subtitle}
+                  />
+                ))}
             </div>
           </div>
         </div>

@@ -1,12 +1,10 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import SingupTemplate, {
-  CardsHunter,
-} from "../Components/templates/SingupTemplate";
+import SingupTemplate from "../Components/templates/SingupTemplate";
 
 const SignupStep1 = () => {
   const navigate = useNavigate();
-  const [mockData, setMockData] = useState<CardsHunter[]>([]);
+  const [mockData, setMockData] = useState<CardHunterCheck[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
 
   const fetchDataCardsFake = () => {
@@ -47,7 +45,7 @@ const SignupStep1 = () => {
       loading={loading}
       title="Selecciona el tipo de cliente que eres"
       description="Para brindarte servicios idoneos para ti"
-      cardHunter={mockData}
+      cardHunterCheck={mockData}
       gridClass="md:grid-cols-2"
     />
   );
